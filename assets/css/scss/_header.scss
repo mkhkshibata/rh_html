@@ -1,0 +1,129 @@
+header {
+	background-color: $color-blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a {
+		color: $color-purewhite;
+	}
+	.inner {
+		width: 100%;
+		max-width: 1800px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 15px 3px;
+		@include mediaTAB {
+			padding: 0.8em 0.8em 0.6em;
+		}
+		@include mediaSP {
+			padding: 0.8em vwSP(20) 0.5em;
+		}
+	}
+	.logo {
+		@include eng;
+		letter-spacing: 0.1em;
+		@include mediaPC {
+			font-size: rem(44);
+		}
+		@include mediaTAB {
+			font-size: vwTAB(44);
+		}
+		@include mediaSP {
+			font-size: vwSP(44);
+		}
+	}
+	.gnav {
+		display: flex;
+		justify-content: flex-end;
+		li {
+			padding-right: 1.8em;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		@include mediaTAB {
+			font-size: vwTAB(16);
+		}
+	}
+	.navBtn-login {
+		padding: 0.6em 2em;
+		background-color: $color-purewhite;
+		color: $color-black;
+		border-radius: 4px;
+	}
+	.navBtn-signup {
+		padding: 0.6em 2em;
+		background-color: $color-pink;
+		border-radius: 4px;
+	}
+
+		
+	@include mediaSP {
+		.nav {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.menuWrap{
+		position: relative;
+		width: vwSP(70);
+		height: vwSP(70);
+		.menuBtn {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 100;
+			a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+			span {
+				width: 100%;
+				height: 1px;
+				background-color: #fff;
+				position: absolute;
+				&:first-child {
+					top: 10%;
+					
+				}
+				&:nth-child(2) {
+					top: 30%;
+					
+				}
+				&:nth-child(3) {
+					top: 70%;
+					
+				}
+			}
+		}
+		.menuCont {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -10;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $color-blue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&.active {
+				z-index: 10;
+				opacity: 1;
+			}
+			li {
+				margin: 2em 0;
+				text-align: center;
+			}
+		}
+	}
+
+}
+

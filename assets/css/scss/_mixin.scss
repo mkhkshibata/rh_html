@@ -1,0 +1,36 @@
+//PC
+@mixin mediaPC {
+	@media screen and (min-width:769px){
+			@content;
+	}
+}
+
+//SP
+@mixin mediaSP {
+	@media screen and (max-width:768px){
+			@content;
+	}
+}
+
+//tablet
+@mixin mediaTAB {
+	@media screen and (min-width:769px) and (max-width:1024px){
+			@content;
+	}
+}
+
+//font
+@mixin eng{
+	font-family: 'Dancing Script', cursive, serif;
+}
+
+//color
+$color-blue: #003968;
+$color-black: #333333;
+$color-purewhite: #fff;
+$color-basewhite: #EBEBE6;
+$color-base: #D69090;
+$color-pink: #F884A3;
+$color-gray: #555555;
+$color-lightgray: #E1E1D9;
+

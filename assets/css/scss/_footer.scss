@@ -1,0 +1,57 @@
+footer {
+	text-align: center;
+	background-color: $color-blue;
+	a {
+		color: $color-purewhite;
+	}
+	p {
+		color: $color-purewhite;
+	}
+	@include mediaPC {
+		padding-top: 120px;
+		padding-bottom: 100px;
+	}
+	@include mediaTAB {
+		padding-top: vwTAB(120);
+		padding-bottom: vwTAB(100);
+	}
+	@include mediaSP {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.fnav{
+		display: flex;
+		justify-content: center;
+		@include mediaPC {
+			margin-bottom: 50px;
+		}
+		@include mediaTAB {
+			margin-bottom: vwTAB(50);
+		}
+		@include mediaSP {
+			align-items: flex-end;
+			margin-top: 0.8em;
+			margin-bottom: 0.6em;
+		}
+
+		li {
+			padding: 0 1em;
+			@include mediaTAB {
+				font-size: vwTAB(16);
+			}
+			@include mediaSP {
+				font-size: vwTAB(12);
+				width: 20%;
+				max-width: 90px;
+			}
+		}
+	}
+	.copy {
+		margin-top: 90px;
+		@include mediaTAB {
+			margin-top: vwTAB(90);
+		}
+	}
+}

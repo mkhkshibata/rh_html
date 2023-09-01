@@ -1,0 +1,50 @@
+// html{
+// 	font-size: 62.5%;
+// }
+
+@function rem($px) {
+	@return ($px / 16) * 1rem;
+}
+
+@function vwTAB($px) {
+	@return $px / 1024 * 100vw;
+}
+
+@function vwSP($px) {
+	@return $px / 768 * 100vw;
+}
+
+body{
+	color: #333;
+	font-family: 'Zen Kaku Gothic New', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	//font-size: 1.6rem;
+	font-size: rem(16);
+	line-height: 1.7;
+}
+img {
+	vertical-align: bottom;
+	padding: 0;
+	margin: 0;
+	border: none;
+	backface-visibility: hidden;
+}
+.cf:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+a{
+	transition: ease-in 0.1s;
+	color: inherit;
+	text-decoration: none;
+	&:hover{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+.bold{
+	font-weight: bold;
+}
+

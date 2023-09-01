@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-------------------
+reset
+--------------------*/
+@import "reset";
+
+@import "mixin";
+
+
+/*-------------------
+base
+--------------------*/
+@import "base";
+
+@include mediaPC {
+  .pc {
+    display: inline-block!important;
+  }
+  .sp {
+    display: none!important;
+	}
+}
+
+@include mediaSP {
+  body{
+		//font-size: 1.4rem;
+		font-size: rem(14);
+		line-height: 1.8;
+	}
+	img {
+		max-width: 100%;
+    width: 100%;
+		height: auto;
+	}
+	.sp {
+		display: inline-block!important;
+	}
+	.pc {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+.logout {
+	display: none!important;
+}
+
+
+
+
+
+/*ヘッダ*/
+@import "header";
+
+/*フッタ*/
+@import "footer";
+
+/*コンテンツ*/
+@import "content";
+
+/*トップ*/
+@import "top";
+
+
+
+
+
+
+
+
+
+
