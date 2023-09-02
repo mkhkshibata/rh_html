@@ -1,17 +1,22 @@
+@use 'sass:math';
+
 // html{
 // 	font-size: 62.5%;
 // }
 
 @function rem($px) {
-	@return ($px / 16) * 1rem;
+	@return math.div($px, 16) * 1rem;
+	// @return ($px / 16) * 1rem;
 }
 
 @function vwTAB($px) {
-	@return $px / 1024 * 100vw;
+	@return math.div($px, 1024) * 100vw;
+	// @return ($px / 1024) * 100vw;
 }
 
 @function vwSP($px) {
-	@return $px / 768 * 100vw;
+	@return math.div($px, 768) * 100vw;
+	// @return ($px / 768) * 100vw;
 }
 
 body{
