@@ -147,7 +147,7 @@ a:hover {
     display: none !important;
   }
 }
-.login {
+.logout {
   display: none !important;
 }
 
@@ -175,12 +175,12 @@ header .inner {
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .inner {
-    padding: 0.8em 0.8em 0.4em;
+    padding: 0.6em 0.8em 0.3em;
   }
 }
 @media screen and (max-width: 768px) {
   header .inner {
-    padding: 0.8em 2.6041666667vw 0.390625vw;
+    padding: 2.6041666667vw 1.3020833333vw 1.5625vw 3.90625vw;
   }
 }
 header .logo {
@@ -199,7 +199,7 @@ header .logo {
 }
 @media screen and (max-width: 768px) {
   header .logo {
-    font-size: 5.7291666667vw;
+    font-size: 6.5104166667vw;
   }
 }
 header .gnav {
@@ -228,6 +228,12 @@ header .gnav {
     width: 26.0416666667vw;
   }
 }
+@media screen and (max-width: 768px) {
+  header .nav {
+    display: flex;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 769px) {
   header .navBtn a {
     padding: 0.6em 2em;
@@ -239,7 +245,7 @@ header .gnav {
     text-align: center;
     display: inline-block;
     width: 11.9791666667vw;
-    max-width: 60px;
+    max-width: 50px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -279,16 +285,11 @@ header .gnav {
     font-size: 1.0416666667vw;
   }
 }
-@media screen and (max-width: 768px) {
-  header .nav {
-    display: flex;
-    align-items: center;
-  }
-}
 header .menuWrap {
   position: relative;
   width: 9.1145833333vw;
   height: 9.1145833333vw;
+  margin-right: 2.6041666667vw;
 }
 header .menuWrap .menuBtn {
   width: 100%;
@@ -308,15 +309,17 @@ header .menuWrap .menuBtn span {
   height: 1px;
   background-color: #fff;
   position: absolute;
+  transition: all 0.3s ease;
 }
 header .menuWrap .menuBtn span:first-child {
-  top: 10%;
+  top: 15%;
 }
 header .menuWrap .menuBtn span:nth-child(2) {
-  top: 30%;
+  top: 50%;
+  opacity: 1;
 }
 header .menuWrap .menuBtn span:nth-child(3) {
-  top: 70%;
+  top: 85%;
 }
 header .menuWrap .menuCont {
   position: fixed;
@@ -332,14 +335,28 @@ header .menuWrap .menuCont {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-header .menuWrap .menuCont.active {
-  z-index: 10;
-  opacity: 1;
+  transition: all 0.3s ease;
 }
 header .menuWrap .menuCont li {
   margin: 2em 0;
   text-align: center;
+}
+header .menuWrap.active .menuBtn span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 55%;
+}
+header .menuWrap.active .menuBtn span:nth-child(2) {
+  opacity: 0;
+}
+header .menuWrap.active .menuBtn span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 55%;
+}
+header .menuWrap.active .menuCont {
+  z-index: 10;
+  opacity: 1;
 }
 
 /*フッタ*/

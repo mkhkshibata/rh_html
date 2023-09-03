@@ -16,10 +16,10 @@ header {
 			padding: 8px 15px 3px;
 		}
 		@include mediaTAB {
-			padding: 0.8em 0.8em 0.4em;
+			padding: 0.6em 0.8em 0.3em;
 		}
 		@include mediaSP {
-			padding: 0.8em vwSP(20) vwSP(3);
+			padding: vwSP(20) vwSP(10) vwSP(12) vwSP(30);
 		}
 	}
 	.logo {
@@ -32,16 +32,17 @@ header {
 			font-size: vwTAB(44);
 		}
 		@include mediaSP {
-			font-size: vwSP(44);
+			font-size: vwSP(50);
 		}
 	}
+
 	.gnav {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
 		@include mediaPC {
 			li {
-				padding-right: 1.8em;
+				padding-right: 1.8em;	
 				&:last-child {
 					padding-right: 0;
 				}
@@ -57,6 +58,13 @@ header {
 			width: vwSP(200);
 		}
 	}
+	@include mediaSP {
+		.nav {
+			display: flex;
+			align-items: center;
+		}
+	}
+
 	.navBtn {
 		a {
 			@include mediaPC {
@@ -67,7 +75,7 @@ header {
 				text-align: center;
 				display: inline-block;
 				width: vwSP(92);
-				max-width: 60px;
+				max-width: 50px;
 			}
 		}
 		&-login {
@@ -107,17 +115,11 @@ header {
 		}
 	}
 
-		
-	@include mediaSP {
-		.nav {
-			display: flex;
-			align-items: center;
-		}
-	}
 	.menuWrap{
 		position: relative;
 		width: vwSP(70);
 		height: vwSP(70);
+		margin-right: vwSP(20);
 		.menuBtn {
 			width: 100%;
 			height: 100%;
@@ -135,17 +137,16 @@ header {
 				height: 1px;
 				background-color: #fff;
 				position: absolute;
+				transition: all 0.3s ease;
 				&:first-child {
-					top: 10%;
-					
+					top: 15%;
 				}
 				&:nth-child(2) {
-					top: 30%;
-					
+					top: 50%;
+					opacity: 1;
 				}
 				&:nth-child(3) {
-					top: 70%;
-					
+					top: 85%;
 				}
 			}
 		}
@@ -163,16 +164,32 @@ header {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&.active {
-				z-index: 10;
-				opacity: 1;
-			}
+			transition: all 0.3s ease;
 			li {
 				margin: 2em 0;
 				text-align: center;
 			}
 		}
+		&.active {
+			.menuBtn {
+				span {
+					&:first-child {
+						transform: rotate(45deg);
+						top: 55%;
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:nth-child(3) {
+						transform: rotate(-45deg);
+						top: 55%;
+					}
+				}
+			}
+			.menuCont {
+				z-index: 10;
+				opacity: 1;
+			}
+		}
 	}
-
 }
-
