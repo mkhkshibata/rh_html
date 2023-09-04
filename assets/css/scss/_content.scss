@@ -5,7 +5,9 @@
 		padding-bottom: 100px;
 	}
 	@include mediaSP {
-		padding-top: vwSP(150);
-		padding-bottom: calc(vwSP(100) + 90px );
+		padding-top: vwSP(80);
+		padding-bottom: calc(vwSP(80) + 70px );
+		padding-left: vwSP(12);
+		padding-right: vwSP(12);
 	}
 }

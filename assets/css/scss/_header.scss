@@ -19,7 +19,7 @@ header {
 			padding: 0.6em 0.8em 0.3em;
 		}
 		@include mediaSP {
-			padding: vwSP(20) vwSP(10) vwSP(12) vwSP(30);
+			padding: vwSP(18) vwSP(10) vwSP(12) vwSP(30);
 		}
 	}
 	.logo {
@@ -54,9 +54,9 @@ header {
 		@include mediaTAB {
 			font-size: vwTAB(16);
 		}
-		@include mediaSP {
-			width: vwSP(200);
-		}
+		// @include mediaSP {
+		// 	width: vwSP(200);
+		// }
 	}
 	@include mediaSP {
 		.nav {
@@ -74,8 +74,8 @@ header {
 			@include mediaSP {
 				text-align: center;
 				display: inline-block;
-				width: vwSP(92);
-				max-width: 50px;
+				width: vwSP(80);
+				max-width: 52px;
 			}
 		}
 		&-login {
@@ -105,13 +105,13 @@ header {
 				border-radius: 5px;
 				display: flex;
 				align-items: center;
-				height: vwSP(86);
-				max-height: 60px;
+				height: vwSP(80);
+				max-height: 54px;
 			}
-			&-text {
-				display: block;
-				font-size: vwSP(8);
-			}
+			// &-text {
+			// 	display: block;
+			// 	font-size: vwSP(8);
+			// }
 		}
 	}
 

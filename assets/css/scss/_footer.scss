@@ -9,7 +9,7 @@ footer {
 	}
 	@include mediaPC {
 		padding-top: 120px;
-		padding-bottom: 100px;
+		padding-bottom: 90px;
 	}
 	@include mediaTAB {
 		padding-top: vwTAB(120);
@@ -20,6 +20,7 @@ footer {
 		bottom: 0;
 		left: 0;
 		right: 0;
+		opacity: 0.85;
 	}
 	.fnav{
 		display: flex;
@@ -32,21 +33,53 @@ footer {
 		}
 		@include mediaSP {
 			align-items: flex-end;
-			margin-top: 0.8em;
-			margin-bottom: 0.6em;
+			margin-top: vwSP(20);
+			margin-bottom: vwSP(10);
+			&.logout {
+				> li {
+					width: auto;
+					max-width: 100%;
+					font-size: vwSP(18);
+					margin: vwSP(8) 0 vwSP(14);
+				}
+			}
+			&-login {
+				display: block;
+				padding: 0.5em 3em;
+				border-radius: 4px;
+				color: $color-black;
+				background-color: $color-purewhite;
+			}
+			&-signup {
+				display: block;
+				padding: 0.5em 3em;
+				border-radius: 4px;
+				background-color: $color-pink;
+			}
 		}
 
 		li {
-			padding: 0 1em;
+			@include mediaPC {
+				padding: 0 2.5em;
+			}
 			@include mediaTAB {
 				font-size: vwTAB(16);
 			}
 			@include mediaSP {
 				font-size: vwTAB(12);
+				padding: 0 1em;
 				width: 20%;
 				max-width: 90px;
+				a {
+					> img {
+						display: block;
+						margin: 0 auto;
+						width: 70%;
+					}
+				}
 			}
 		}
+
 	}
 	.copy {
 		margin-top: 90px;
