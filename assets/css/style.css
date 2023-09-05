@@ -90,6 +90,7 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   letter-spacing: 0.05em;
+  background-color: #EBEBE6;
 }
 
 img {
@@ -425,7 +426,7 @@ footer .fnav {
 }
 @media screen and (min-width: 769px) {
   footer .fnav li {
-    padding: 0 2.5em;
+    padding: 0 2.5 em;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {

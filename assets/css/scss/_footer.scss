@@ -60,7 +60,7 @@ footer {
 
 		li {
 			@include mediaPC {
-				padding: 0 2.5em;
+				padding: 0 2.5	em;
 			}
 			@include mediaTAB {
 				font-size: vwTAB(16);
