@@ -1,0 +1,68 @@
+.userArchive {
+	&_list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&_listItem {
+		> a {
+			display: block;
+			position: relative;
+		}
+		@include mediaPC {
+			width: calc((100% - 90px) / 4);
+			margin-right: 30px;
+			margin-bottom: 60px;
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+		@include mediaTAB {
+			width: calc((100% - 120px) / 3);
+			margin-right: 60px;
+			margin-bottom: 60px;
+			&:nth-child(4n) {
+				margin-right: 60px;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+		@include mediaSP {
+			width: calc((100% - vwSP(30)) / 2);
+			margin-right: vwSP(30);
+			margin-bottom: vwSP(60);
+			&:nth-child(3n) {
+				margin-right: vwSP(30);
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+		&-img {
+			display: block;
+			width: 100%;
+			background-color: $color-lightgray;
+			margin-bottom: 0.8em;
+			img {
+				width: 100%;
+				object-fit: cover;
+				@include mediaPC {
+					height: 25vw;
+				}
+				@include mediaTAB {
+					height: 35vw;
+				}
+				@include mediaSP {
+					height: 55vw;
+				}
+			}
+		}
+		&-text {
+			display: block;
+			font-weight: bold;
+			@include mediaSP {
+				font-size: vwSP(20);
+			}
+		}
+	}
+}
