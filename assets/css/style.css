@@ -477,18 +477,26 @@ footer .copy {
     padding-right: 1.5625vw;
   }
 }
-.content_title {
+.content_title-text {
   font-weight: bold;
 }
 @media screen and (min-width: 769px) {
-  .content_title {
+  .content_title-text {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content_title-text {
+    font-size: 4.1666666667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .content_title {
     margin-bottom: 80px;
   }
 }
 @media screen and (max-width: 768px) {
   .content_title {
-    font-size: 4.1666666667vw;
     margin-bottom: 13.0208333333vw;
   }
 }
@@ -695,6 +703,24 @@ footer .copy {
 .userArchive_listItem > a {
   display: block;
   position: relative;
+}
+.userArchive_listItem.icon a::after {
+  content: "new";
+  display: block;
+  background-color: #F884A3;
+  color: #fff;
+  padding: 0.6em;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  font-size: 0.8125rem;
+}
+@media screen and (max-width: 768px) {
+  .userArchive_listItem.icon a::after {
+    font-size: 1.5625vw;
+  }
 }
 @media screen and (min-width: 769px) {
   .userArchive_listItem {

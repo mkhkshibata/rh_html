@@ -15,13 +15,19 @@
 		padding-right: vwSP(12);
 	}
 	&_title {
-		font-weight: bold;
+		&-text {
+			font-weight: bold;
+			@include mediaPC {
+				font-size: rem(24);
+			}
+			@include mediaSP {
+				font-size: vwSP(32);
+			}
+		}
 		@include mediaPC {
-			font-size: rem(24);
 			margin-bottom: 80px;
 		}
 		@include mediaSP {
-			font-size: vwSP(32);
 			margin-bottom: vwSP(100);
 		}
 		&::after {
@@ -32,9 +38,6 @@
 			background-color: $color-blue;
 			margin-top: 0.6em;
 		}
-	}
-	&_body {
-
 	}
 	&_pagination {
 		margin-top: 50px;

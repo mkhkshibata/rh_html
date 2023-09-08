@@ -25,35 +25,57 @@
 <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 </head>
 <body>
-<section class="content board_archive">
+<section class="content boardArchive">
 	<h2 class="content_title">
-		<span>掲示板一覧</span>
-		<span><a href=""></a></span>
+		<span class="content_title-text">掲示板一覧</span>
+		<span class="content_btn"><a href=""></a></span>
 	</h2>
 	<div class="content_body">
-		<div class="board_heading">
-			<ul class="board_category">
-				<li><a href=""></a></li>
+		<div class="boardArchive_heading">
+			<ul class="category_list">
+				<li class="category_list"><a href="">#作家</a></li>
+				<li class="category_list"><a href="">#作品</a></li>
+				<li class="category_list"><a href="">#ジャンル</a></li>
+				<li class="category_list"><a href="">#その他</a></li>
 			</ul>
-			<div class="board_search"></div>
+			<div class="category_search">
+				<input type="text" name="" id="">
+			</div>
 		</div>
-		<div class="board_body">
-			<div class="board_item">
-				<div class="board_cont">
+		<div class="boardArchive_body">
+			<div class="boardItem_wrap">
+				<div class="boardItem_cont">
+					<div class="boardItem_upper">
+						<span class="boardItem_upper-num">1</span>
+						<span class="boardItem_upper-text">掲示板のタイトル</span>
+					</div>
+					<div class="boardItem_lower">
+						<ul class="boardItem_lower-genre">
+							<li><a href="">#作家</a></li>
+							<li><a href="">#作品</a></li>
+							<li><a href="">#その他</a></li>
+						</ul>
+						<div class="boardItem_lower-info">
+							<span class="comment">
+								<img src="./assets/img/common/icon_comment.png" alt=""> 5
+							</span>
+							<span class="time">2023/8/21 08:30</span>
+						</div>
+					</div>
 
 				</div>
-				<div class="board_delete">
-					<a href=""></a>
+				<div class="boardItem_btn-delete">
+					<a href="">削除</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="content_pagination">
-		<ul>
-			<li class="content_pagination-prev"><a href="">前のページへ</a></li>
-			<li><a href="" class="content_pagination-num">1</a></li>
+		<ul class="content_pagination-wrap">
+			<li class="content_pagination-prev"><a href="">前へ</a></li>
+			<li><a href="" class="content_pagination-num current">1</a></li>
 			<li><a href="" class="content_pagination-num">2</a></li>
-			<li class="content_pagination-nexr"><a href="">次のページへ</a></li>
+			<li class="content_pagination-next"><a href="">次へ</a></li>
 		</ul>
 	</div>
 </section>
