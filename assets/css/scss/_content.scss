@@ -14,16 +14,7 @@
 		padding-left: vwSP(12);
 		padding-right: vwSP(12);
 	}
-	&_title {
-		&-text {
-			font-weight: bold;
-			@include mediaPC {
-				font-size: rem(24);
-			}
-			@include mediaSP {
-				font-size: vwSP(32);
-			}
-		}
+	&_heading {
 		@include mediaPC {
 			margin-bottom: 80px;
 		}
@@ -35,10 +26,40 @@
 			display: block;
 			width: 100%;
 			height: 2px;
-			background-color: $color-blue;
+			background-color: $color-black;
 			margin-top: 0.6em;
 		}
+		&Inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&Text {
+			font-weight: bold;
+			padding-left: 0.5em;
+			@include mediaPC {
+				font-size: rem(24);
+			}
+			@include mediaSP {
+				font-size: vwSP(32);
+			}
+		}
+		&Btn {
+			padding-right: 0.5em;
+			a {
+				color: $color-purewhite;
+				background-color: $color-pink;
+				font-size: rem(15);
+				padding: 0.6em 1.5em;
+				border-radius: 5px;
+				@include mediaSP {
+					font-size: vwSP(18);
+					border-radius: 5px;
+				}
+			}
+		}
 	}
+
 	&_pagination {
 		margin-top: 50px;
 		@include mediaSP {
