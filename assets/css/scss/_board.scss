@@ -34,7 +34,7 @@
 							display: inline-block;
 							margin-right: 1em;
 							@include mediaSP {
-								font-size: vwSP(15);
+								font-size: vwSP(18);
 								margin-bottom: 1em;
 							}
 						}
@@ -44,9 +44,18 @@
 					input {
 						color: $color-black;
 						background-color: $color-purewhite;
-						width: 12em;
-						padding: 0.4em 0.8em;
 						border-radius: 2em;
+						width: 14em;
+						padding: 0.4em 1.2em;
+						font-size: rem(15);
+						@include mediaSP {
+							width: 28em;
+							padding: 0.8em 1.2em;
+							font-size: vwSP(15);
+						}
+						&::placeholder {
+							color: #ccc;
+						}
 					}
 					@include mediaSP {
 						display: flex;
@@ -61,39 +70,42 @@
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					padding-bottom: 2em;
 					border-bottom: 1px dotted $color-gray;
+					padding-bottom: 2em;
+					margin-bottom: 2.8em;
+					@include mediaSP {
+						padding-bottom: 1.2em;
+						margin-bottom: 1.8em;
+					}
 				}
 				&_upper {
 					font-size: rem(22);
 					margin-bottom: 1em;
 					@include mediaSP {
-						font-size: vwSP(20);
+						font-size: vwSP(28);
 					}
 					&Num {
 						margin-right: 1em;
 					}
-					&Text {
-	
-					}
 				}
 				&_lower {
 					@include mediaPC {
-
 						display: flex;
 						justify-content: flex-start;
 						align-items: center;
 						flex-wrap: wrap;
+						padding-left: 2.5em;
 					}
-
+					@include mediaSP {
+						padding-left: vwSP(46);
+					}
 					&Tag {
 						display: flex;
 						justify-content: flex-start;
 						align-items: center;
 						flex-wrap: wrap;
-
 						@include mediaSP {
-							margin-bottom: 1em;
+							margin-bottom: 0.5em;
 						}
 						&Item {
 							margin-right: 0.5em;
@@ -105,6 +117,10 @@
 								display: inline-block;
 								font-size: rem(13);
 								letter-spacing: 0.1em;
+								@include mediaSP {
+									font-size: vwSP(14);
+									margin-bottom: 0.5em;
+								}
 							}
 						}
 					}
@@ -112,7 +128,8 @@
 						margin-left: 1em;
 						font-size: rem(16);
 						@include mediaSP {
-							font-size: vwSP(14);
+							margin-left: 0.5em;
+							font-size: vwSP(15);
 							img {
 								width: 1.5em;
 								vertical-align: middle;
@@ -123,9 +140,8 @@
 						margin-left: 1em;
 						font-size: rem(16);
 						@include mediaSP {
-							font-size: vwSP(14);
+							font-size: vwSP(18);
 						}
-
 					}
 				}
 				&_btn {
@@ -137,7 +153,8 @@
 						padding: 0.4em 1em;
 						border-radius: 5px;
 						@include mediaSP {
-							font-size: vwSP(15);
+							font-size: vwSP(18);
+							padding: 0.8em 1.2em;
 							border-radius: 5px;
 						}
 					}
@@ -145,6 +162,4 @@
 			}
 		}
 	}
-
-
 }

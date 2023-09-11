@@ -11,8 +11,8 @@
 	@include mediaSP {
 		padding-top: vwSP(80);
 		padding-bottom: calc(vwSP(80) + 70px );
-		padding-left: vwSP(12);
-		padding-right: vwSP(12);
+		padding-left: vwSP(14);
+		padding-right: vwSP(14);
 	}
 	&_heading {
 		@include mediaPC {
@@ -41,7 +41,7 @@
 				font-size: rem(24);
 			}
 			@include mediaSP {
-				font-size: vwSP(32);
+				font-size: vwSP(36);
 			}
 		}
 		&Btn {
@@ -53,7 +53,7 @@
 				padding: 0.6em 1.5em;
 				border-radius: 5px;
 				@include mediaSP {
-					font-size: vwSP(18);
+					font-size: vwSP(20);
 					border-radius: 5px;
 				}
 			}

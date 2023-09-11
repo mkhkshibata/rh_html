@@ -473,8 +473,8 @@ footer .copy {
   .content {
     padding-top: 10.4166666667vw;
     padding-bottom: calc(10.4166666667vw + 70px);
-    padding-left: 1.5625vw;
-    padding-right: 1.5625vw;
+    padding-left: 1.8229166667vw;
+    padding-right: 1.8229166667vw;
   }
 }
 @media screen and (min-width: 769px) {
@@ -511,7 +511,7 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .content_headingText {
-    font-size: 4.1666666667vw;
+    font-size: 4.6875vw;
   }
 }
 .content_headingBtn {
@@ -526,7 +526,7 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .content_headingBtn a {
-    font-size: 2.34375vw;
+    font-size: 2.6041666667vw;
     border-radius: 5px;
   }
 }
@@ -794,11 +794,13 @@ footer .copy {
 @media screen and (min-width: 769px) {
   .userArchive_listItem-img img {
     height: 25vw;
+    max-height: 290px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .userArchive_listItem-img img {
-    height: 35vw;
+    height: 33vw;
+    max-height: 320px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -859,16 +861,39 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .boardArchive_heading .category_listItem a {
-    font-size: 1.953125vw;
+    font-size: 2.34375vw;
     margin-bottom: 1em;
   }
 }
 .boardArchive_heading .category_search input {
   color: #333333;
   background-color: #fff;
-  width: 12em;
-  padding: 0.4em 0.8em;
   border-radius: 2em;
+  width: 14em;
+  padding: 0.4em 1.2em;
+  font-size: 0.9375rem;
+}
+@media screen and (max-width: 768px) {
+  .boardArchive_heading .category_search input {
+    width: 28em;
+    padding: 0.8em 1.2em;
+    font-size: 1.953125vw;
+  }
+}
+.boardArchive_heading .category_search input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.boardArchive_heading .category_search input::-moz-placeholder {
+  color: #ccc;
+}
+.boardArchive_heading .category_search input:-ms-input-placeholder {
+  color: #ccc;
+}
+.boardArchive_heading .category_search input::-ms-input-placeholder {
+  color: #ccc;
+}
+.boardArchive_heading .category_search input::placeholder {
+  color: #ccc;
 }
 @media screen and (max-width: 768px) {
   .boardArchive_heading .category_search {
@@ -880,8 +905,15 @@ footer .copy {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 2em;
   border-bottom: 1px dotted #555555;
+  padding-bottom: 2em;
+  margin-bottom: 2.8em;
+}
+@media screen and (max-width: 768px) {
+  .boardArchive .boardItem_wrap {
+    padding-bottom: 1.2em;
+    margin-bottom: 1.8em;
+  }
 }
 .boardArchive .boardItem_upper {
   font-size: 1.375rem;
@@ -889,7 +921,7 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .boardArchive .boardItem_upper {
-    font-size: 2.6041666667vw;
+    font-size: 3.6458333333vw;
   }
 }
 .boardArchive .boardItem_upperNum {
@@ -901,6 +933,12 @@ footer .copy {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    padding-left: 2.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .boardArchive .boardItem_lower {
+    padding-left: 5.9895833333vw;
   }
 }
 .boardArchive .boardItem_lowerTag {
@@ -911,7 +949,7 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .boardArchive .boardItem_lowerTag {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 }
 .boardArchive .boardItem_lowerTagItem {
@@ -926,13 +964,20 @@ footer .copy {
   font-size: 0.8125rem;
   letter-spacing: 0.1em;
 }
+@media screen and (max-width: 768px) {
+  .boardArchive .boardItem_lowerTagItem a {
+    font-size: 1.8229166667vw;
+    margin-bottom: 0.5em;
+  }
+}
 .boardArchive .boardItem_lowerComment {
   margin-left: 1em;
   font-size: 1rem;
 }
 @media screen and (max-width: 768px) {
   .boardArchive .boardItem_lowerComment {
-    font-size: 1.8229166667vw;
+    margin-left: 0.5em;
+    font-size: 1.953125vw;
   }
   .boardArchive .boardItem_lowerComment img {
     width: 1.5em;
@@ -945,7 +990,7 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .boardArchive .boardItem_lowerDate {
-    font-size: 1.8229166667vw;
+    font-size: 2.34375vw;
   }
 }
 .boardArchive .boardItem_btn {
@@ -960,7 +1005,8 @@ footer .copy {
 }
 @media screen and (max-width: 768px) {
   .boardArchive .boardItem_btn a {
-    font-size: 1.953125vw;
+    font-size: 2.34375vw;
+    padding: 0.8em 1.2em;
     border-radius: 5px;
   }
 }
