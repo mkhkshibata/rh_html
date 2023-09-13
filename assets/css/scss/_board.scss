@@ -1,0 +1,165 @@
+.board {
+	&Archive {
+		.content_heading {
+			@include mediaPC {
+				margin-bottom: 50px;
+			}
+			@include mediaSP {
+				margin-bottom: vwSP(60);
+			}
+		}
+		&_heading {
+			margin-bottom: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include mediaSP {
+				margin-bottom: vwSP(100);
+				display: block;
+			}
+			.category {
+				&_list {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					flex-wrap: wrap;
+					@include mediaSP {
+						margin-bottom: 1em;
+					}
+					&Item {
+						a {
+							border: 1px solid $color-black;
+							padding: 0.3em 1.2em;
+							border-radius: 2em;
+							display: inline-block;
+							margin-right: 1em;
+							@include mediaSP {
+								font-size: vwSP(18);
+								margin-bottom: 1em;
+							}
+						}
+					}
+				}
+				&_search {
+					input {
+						color: $color-black;
+						background-color: $color-purewhite;
+						border-radius: 2em;
+						width: 14em;
+						padding: 0.4em 1.2em;
+						font-size: rem(15);
+						@include mediaSP {
+							width: 28em;
+							padding: 0.8em 1.2em;
+							font-size: vwSP(15);
+						}
+						&::placeholder {
+							color: #ccc;
+						}
+					}
+					@include mediaSP {
+						display: flex;
+						justify-content: flex-end;
+					}
+				}
+			}
+		}
+		.board {
+			&Item {
+				&_wrap {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-bottom: 1px dotted $color-gray;
+					padding-bottom: 2em;
+					margin-bottom: 2.8em;
+					@include mediaSP {
+						padding-bottom: 1.2em;
+						margin-bottom: 1.8em;
+					}
+				}
+				&_upper {
+					font-size: rem(22);
+					margin-bottom: 1em;
+					@include mediaSP {
+						font-size: vwSP(28);
+					}
+					&Num {
+						margin-right: 1em;
+					}
+				}
+				&_lower {
+					@include mediaPC {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						flex-wrap: wrap;
+						padding-left: 2.5em;
+					}
+					@include mediaSP {
+						padding-left: vwSP(46);
+					}
+					&Tag {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						flex-wrap: wrap;
+						@include mediaSP {
+							margin-bottom: 0.5em;
+						}
+						&Item {
+							margin-right: 0.5em;
+							a {
+								padding: 0.3em 1em;
+								border-radius: 2em;
+								color: $color-purewhite;
+								background-color: $color-gray;
+								display: inline-block;
+								font-size: rem(13);
+								letter-spacing: 0.1em;
+								@include mediaSP {
+									font-size: vwSP(14);
+									margin-bottom: 0.5em;
+								}
+							}
+						}
+					}
+					&Comment {
+						margin-left: 1em;
+						font-size: rem(16);
+						@include mediaSP {
+							margin-left: 0.5em;
+							font-size: vwSP(15);
+							img {
+								width: 1.5em;
+								vertical-align: middle;
+							}
+						}
+					}
+					&Date {
+						margin-left: 1em;
+						font-size: rem(16);
+						@include mediaSP {
+							font-size: vwSP(18);
+						}
+					}
+				}
+				&_btn {
+					padding-right: 0.5em;
+					a {
+						color: $color-purewhite;
+						background-color: $color-blue;
+						font-size: rem(15);
+						padding: 0.4em 1em;
+						border-radius: 5px;
+						@include mediaSP {
+							font-size: vwSP(18);
+							padding: 0.8em 1.2em;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

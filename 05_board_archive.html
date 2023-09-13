@@ -25,35 +25,82 @@
 <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 </head>
 <body>
-<section class="content board_archive">
-	<h2 class="content_title">
-		<span>掲示板一覧</span>
-		<span><a href=""></a></span>
-	</h2>
-	<div class="content_body">
-		<div class="board_heading">
-			<ul class="board_category">
-				<li><a href=""></a></li>
-			</ul>
-			<div class="board_search"></div>
+<section class="content boardArchive">
+	<div class="content_heading">
+		<div class="content_headingInner">
+			<h2 class="content_headingText">掲示板一覧</h2>
+			<div class="content_headingBtn"><a href="">掲示板作成</a></div>
 		</div>
-		<div class="board_body">
-			<div class="board_item">
-				<div class="board_cont">
-
+	</div>
+	<div class="content_body">
+		<div class="boardArchive_heading">
+			<ul class="category_list">
+				<li class="category_listItem"><a href="">#作家</a></li>
+				<li class="category_listItem"><a href="">#作品</a></li>
+				<li class="category_listItem"><a href="">#ジャンル</a></li>
+				<li class="category_listItem"><a href="">#その他</a></li>
+			</ul>
+			<div class="category_search">
+				<input type="text" name="" id="" placeholder="ワード検索">
+			</div>
+		</div>
+		<div class="boardArchive_body">
+			<div class="boardItem_wrap">
+				<div class="boardItem_cont">
+					<div class="boardItem_upper">
+						<span class="boardItem_upperNum">1</span>
+						<span class="boardItem_upperText">掲示板のタイトル</span>
+					</div>
+					<div class="boardItem_lower">
+						<ul class="boardItem_lowerTag">
+							<li class="boardItem_lowerTagItem"><a href="">#作家</a></li>
+							<li class="boardItem_lowerTagItem"><a href="">#作品</a></li>
+							<li class="boardItem_lowerTagItem"><a href="">#その他</a></li>
+						</ul>
+						<div class="boardItem_lowerInfo">
+							<span class="boardItem_lowerComment">
+								<img src="./assets/img/common/icon_comment.png" alt=""> 5
+							</span>
+							<span class="boardItem_lowerDate">2023/8/21 08:30</span>
+						</div>
+					</div>
 				</div>
-				<div class="board_delete">
-					<a href=""></a>
+				<div class="boardItem_btn">
+					<a href="">削除</a>
+				</div>
+			</div>
+			<div class="boardItem_wrap">
+				<div class="boardItem_cont">
+					<div class="boardItem_upper">
+						<span class="boardItem_upperNum">1</span>
+						<span class="boardItem_upperText">掲示板のタイトル</span>
+					</div>
+					<div class="boardItem_lower">
+						<ul class="boardItem_lowerTag">
+							<li class="boardItem_lowerTagItem"><a href="">#作家</a></li>
+							<li class="boardItem_lowerTagItem"><a href="">#作品</a></li>
+							<li class="boardItem_lowerTagItem"><a href="">#その他</a></li>
+						</ul>
+						<div class="boardItem_lowerInfo">
+							<span class="boardItem_lowerComment">
+								<img src="./assets/img/common/icon_comment.png" alt=""> 5
+							</span>
+							<span class="boardItem_lowerDate">2023/8/21 08:30</span>
+						</div>
+					</div>
+				</div>
+				<div class="boardItem_btn">
+					<a href="">削除</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="content_pagination">
-		<ul>
-			<li class="content_pagination-prev"><a href="">前のページへ</a></li>
-			<li><a href="" class="content_pagination-num">1</a></li>
+		<ul class="content_pagination-wrap">
+			<li class="content_pagination-prev"><a href="">前へ</a></li>
+			<li><a href="" class="content_pagination-num current">1</a></li>
 			<li><a href="" class="content_pagination-num">2</a></li>
-			<li class="content_pagination-nexr"><a href="">次のページへ</a></li>
+			<li class="content_pagination-next"><a href="">次へ</a></li>
 		</ul>
 	</div>
 </section>

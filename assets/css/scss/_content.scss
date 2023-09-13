@@ -1,13 +1,113 @@
 .content {
 	background-color: $color-basewhite;
+
 	@include mediaPC {
 		padding-top: 100px;
 		padding-bottom: 100px;
+		width: calc(100vw - 60px);
+		max-width: 1024px;
+		margin: 0 auto;
 	}
 	@include mediaSP {
 		padding-top: vwSP(80);
 		padding-bottom: calc(vwSP(80) + 70px );
-		padding-left: vwSP(12);
-		padding-right: vwSP(12);
+		padding-left: vwSP(14);
+		padding-right: vwSP(14);
+	}
+	&_heading {
+		@include mediaPC {
+			margin-bottom: 80px;
+		}
+		@include mediaSP {
+			margin-bottom: vwSP(100);
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $color-black;
+			margin-top: 0.6em;
+		}
+		&Inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&Text {
+			font-weight: bold;
+			padding-left: 0.5em;
+			@include mediaPC {
+				font-size: rem(24);
+			}
+			@include mediaSP {
+				font-size: vwSP(36);
+			}
+		}
+		&Btn {
+			padding-right: 0.5em;
+			a {
+				color: $color-purewhite;
+				background-color: $color-pink;
+				font-size: rem(15);
+				padding: 0.6em 1.5em;
+				border-radius: 5px;
+				@include mediaSP {
+					font-size: vwSP(20);
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+
+	&_pagination {
+		margin-top: 50px;
+		@include mediaSP {
+			margin-top: vwSP(50);
+		}
+		&-wrap {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include mediaSP {
+				font-size: vwSP(18);
+			}
+		}
+		&-prev {
+			margin-right: 1.6em;
+		}
+		&-num {
+			padding: 0 14px;
+			@include mediaSP {
+				padding: 0 1em;
+			}
+			&.current {
+				font-weight: bold;
+				color: #fff;
+				position: relative;
+				z-index: 10;
+				&::after {
+					content: "";
+					display: block;
+					width: 1.5em;
+					height: 1.5em;
+					background-color: $color-gray;
+					border-radius: 50%;
+					z-index: -1;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					@include mediaSP {
+						width: 2em;
+						height: 2em;
+					}
+				}
+			}
+		}
+		&-next {
+			margin-left: 1.6em;
+		}
+
 	}
 }

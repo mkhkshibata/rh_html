@@ -1,0 +1,90 @@
+.userArchive {
+	&_list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&_listItem {
+		> a {
+			display: block;
+			position: relative;
+		}
+		&.icon {
+			a {
+				&::after {
+					content: "new";
+					display: block;
+					background-color: $color-pink;
+					color: $color-purewhite;
+					padding: 0.6em;
+					border-radius: 50%;
+					text-align: center;
+					position: absolute;
+					top: -1em;
+					right: -1em;
+					font-size: rem(13);
+					@include mediaSP {
+						font-size: vwSP(12);
+					}
+				}
+			}
+		}
+		@include mediaPC {
+			width: calc((100% - 90px) / 4);
+			margin-right: 30px;
+			margin-bottom: 60px;
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+		@include mediaTAB {
+			width: calc((100% - 120px) / 3);
+			margin-right: 60px;
+			margin-bottom: 60px;
+			&:nth-child(4n) {
+				margin-right: 60px;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+		@include mediaSP {
+			width: calc((100% - vwSP(30)) / 2);
+			margin-right: vwSP(30);
+			margin-bottom: vwSP(60);
+			&:nth-child(3n) {
+				margin-right: vwSP(30);
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+		&-img {
+			display: block;
+			width: 100%;
+			background-color: $color-lightgray;
+			margin-bottom: 0.8em;
+			img {
+				width: 100%;
+				object-fit: cover;
+				@include mediaPC {
+					height: 25vw;
+					max-height: 290px;
+				}
+				@include mediaTAB {
+					height: 33vw;
+					max-height: 320px;
+				}
+				@include mediaSP {
+					height: 55vw;
+				}
+			}
+		}
+		&-text {
+			display: block;
+			font-weight: bold;
+			@include mediaSP {
+				font-size: vwSP(20);
+			}
+		}
+	}
+}
