@@ -1,0 +1,75 @@
+.diary {
+	&Archive {
+		.diary {
+			&Item {
+				&_wrap {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-bottom: 1px dotted $color-gray;
+					padding-bottom: 2em;
+					margin-bottom: 2.8em;
+					@include mediaSP {
+						padding-bottom: 1.2em;
+						margin-bottom: 1.8em;
+					}
+				}
+				&_cont {
+					width: 80%;
+					@include mediaSP {
+						width: 80%;
+					}
+				}
+				&_upper {
+					display: flex;
+					align-items: center;
+					margin-bottom: 0.8em;
+					&Text {
+						font-size: rem(18);
+						font-weight: bold;
+						@include mediaSP {
+							font-size: vwSP(18);
+						}
+					}
+					&Date{
+						font-size: rem(15);
+						margin-left: 1.2em;
+						@include mediaSP {
+							font-size: vwSP(14);
+						}
+					}
+				}
+				&_lower {
+					@include mediaSP {
+						font-size: vwSP(16);
+					}
+				}
+				&_btn {
+					display: flex;
+					justify-content: space-between;
+					width: 140px;
+					@include mediaSP {
+						width: auto;
+						flex-direction: column;
+						gap: 0.8em;
+					}
+					a {
+						display: inline-block;
+						color: $color-purewhite;
+						background-color: $color-blue;
+						font-size: rem(15);
+						padding: 0.4em 1em;
+						border-radius: 5px;
+						@include mediaSP {
+							font-size: vwSP(16);
+							padding: 0.6em 1em;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+}
