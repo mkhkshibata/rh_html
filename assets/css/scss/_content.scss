@@ -11,8 +11,8 @@
 	@include mediaSP {
 		padding-top: vwSP(80);
 		padding-bottom: calc(vwSP(80) + 70px );
-		padding-left: vwSP(14);
-		padding-right: vwSP(14);
+		padding-left: vwSP(16);
+		padding-right: vwSP(16);
 	}
 	&_heading {
 		@include mediaPC {
@@ -27,7 +27,7 @@
 			width: 100%;
 			height: 2px;
 			background-color: $color-black;
-			margin-top: 0.6em;
+			margin-top: 0.8em;
 		}
 		&Inner {
 			display: flex;
@@ -47,10 +47,11 @@
 		&Btn {
 			padding-right: 0.5em;
 			a {
+				display: inline-block;
 				color: $color-purewhite;
 				background-color: $color-pink;
 				font-size: rem(15);
-				padding: 0.6em 1.5em;
+				padding: 0.5em 1.5em;
 				border-radius: 5px;
 				@include mediaSP {
 					font-size: vwSP(20);
