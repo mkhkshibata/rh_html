@@ -818,6 +818,20 @@ footer .copy {
     font-size: 2.6041666667vw;
   }
 }
+.userDetail_upper {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .userDetail_upper {
+    display: block;
+  }
+}
+.userDetail .userImg {
+  width: 50%;
+}
+.userDetail .userImg img {
+  width: 100%;
+}
 
 /*掲示板*/
 @media screen and (min-width: 769px) {
