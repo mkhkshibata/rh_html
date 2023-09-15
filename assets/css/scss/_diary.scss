@@ -1,5 +1,20 @@
 .diary {
 	&Archive {
+		.content_heading {
+			&Inner {
+				align-items: flex-end;
+			}
+			&Text {
+				width: 70%;
+				line-height: 1.4;
+			}
+			@include mediaPC {
+				margin-bottom: 50px;
+			}
+			@include mediaSP {
+				margin-bottom: vwSP(60);
+			}
+		}
 		.diary {
 			&Item {
 				&_wrap {
@@ -7,6 +22,8 @@
 					justify-content: space-between;
 					align-items: center;
 					border-bottom: 1px dotted $color-gray;
+					padding-left: 1em;
+					padding-right: 1em;
 					padding-bottom: 2em;
 					margin-bottom: 2.8em;
 					@include mediaSP {
@@ -15,9 +32,9 @@
 					}
 				}
 				&_cont {
-					width: 80%;
+					width: 78%;
 					@include mediaSP {
-						width: 80%;
+						width: 84%;
 					}
 				}
 				&_upper {
@@ -27,13 +44,13 @@
 					&Text {
 						font-size: rem(18);
 						font-weight: bold;
+						margin-right: 1.2em;
 						@include mediaSP {
 							font-size: vwSP(18);
 						}
 					}
 					&Date{
 						font-size: rem(15);
-						margin-left: 1.2em;
 						@include mediaSP {
 							font-size: vwSP(14);
 						}
@@ -43,6 +60,22 @@
 					@include mediaSP {
 						font-size: vwSP(16);
 					}
+					&Text {
+						display: inline-block;
+						@include mediaSP {
+							display: inline;
+						}
+					}
+					&Icon {
+						display: inline-block;
+						margin-left: 1em;
+						@include mediaSP {
+							img {
+								width: 1.5em;
+								vertical-align: middle;
+							}
+						}
+					}
 				}
 				&_btn {
 					display: flex;
@@ -51,7 +84,7 @@
 					@include mediaSP {
 						width: auto;
 						flex-direction: column;
-						gap: 0.8em;
+						gap: 0.6em;
 					}
 					a {
 						display: inline-block;
@@ -71,5 +104,80 @@
 		}
 	}
 
+	&Detail {
+		.content_heading {
+			@include mediaPC {
+				margin-bottom: 50px;
+			}
+			@include mediaSP {
+				margin-bottom: vwSP(60);
+			}
+			&Inner {
+				align-items: flex-end;
+			}
+			&Text {
+				width: 90%;
+				line-height: 1.4;
+				@include mediaSP {
+					width: 80%;
+					font-size: vwSP(32);
+				}
+			}
+			&Icon {
+				display: inline-block;
+				margin-left: 1em;
+				@include mediaSP {
+					img {
+						width: 1.5em;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		&_heading {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include mediaPC {
+				gap: 3em;
+				margin-bottom: 80px;
+			}
+			@include mediaSP {
+				gap: 1.4em;
+				margin-bottom: vwSP(70);
+			}
+			&Btn {
+				a {
+					display: inline-block;
+					color: $color-purewhite;
+					background-color: $color-blue;
+					font-size: rem(15);
+					padding: 0.5em 2.8em;
+					border-radius: 5px;
+					@include mediaSP {
+						font-size: vwSP(20);
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+		.diary {
+			&Item {
+				&_wrap {
+					padding-left: 2em;
+					padding-right: 2em;
+					@include mediaSP {
+						font-size: vwSP(18);
+						padding-left: 1em;
+						padding-right: 1em;
+					}
+				}
+				&_cont {
+					line-height: 2;
+					word-break: break-word;
+				}
+			}
+		}
+	}
 
 }
