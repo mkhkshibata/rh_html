@@ -93,15 +93,220 @@
 	&Detail {
 		&_upper {
 			display: flex;
+			justify-content: space-between;
+			margin-bottom: 100px;
 			@include mediaSP {
 				display: block;
+				margin-bottom: vwSP(100);
 			}
 		}
 		.user {
 			&Img {
-				width: 50%;
-				img {
-					width: 100%;
+				position: relative;
+				@include mediaPC {
+					width: 48%;
+					img {
+						width: 100%;
+					}
+				}
+				@include mediaSP {
+					margin-bottom: vwSP(80);
+				}
+				&_main {
+					@include mediaPC {
+						margin-bottom: 50px;
+					}
+					@include mediaSP {
+						margin-bottom: vwSP(60);
+					}
+				}
+				&_btn {
+					&-next {
+						display: block;
+						width: 20px;
+						height: 20px;
+						border-top: solid 1px $color-gray;
+						border-right: solid 1px $color-gray;
+						transform: rotate(45deg);
+						position: absolute;
+						top: 50%;
+						right: -1.2em;
+						z-index: 100;
+					}
+					&-prev {
+						display: block;
+						width: 20px;
+						height: 20px;
+						border-top: solid 1px #697b91;
+						border-right: solid 1px #697b91;
+						transform: rotate(225deg);
+						position: absolute;
+						top: 50%;
+						left: -1.2em;
+						z-index: 100;
+					}
+				}
+			}
+			&Info {
+				@include mediaPC {
+					width: 48%;
+				}
+				&_heading {
+					@include mediaPC {
+						margin-bottom: 60px;
+					}
+					@include mediaSP {
+						margin-bottom: vwSP(80);
+					}
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: $color-gray;
+						margin-top: 1em;
+					}
+					&Inner {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						flex-wrap: wrap;
+					}
+					&Wrap {
+						display: flex;
+						align-items: center;
+						flex-wrap: wrap;
+					}
+					&Text {
+						font-weight: bold;
+						padding-left: 0.5em;
+						padding-right: 0.5em;
+						@include mediaPC {
+							font-size: rem(20);
+						}
+						@include mediaSP {
+							font-size: vwSP(28);
+						}
+						&Sub {
+							@include mediaPC {
+								font-size: rem(13);
+								padding-right: 0.5em;
+							}
+							@include mediaSP {
+								font-size: vwSP(13);
+							}
+						}
+					}
+					&Btn {
+						margin-left: auto;
+						a {
+							display: inline-block;
+							color: $color-purewhite;
+							background-color: $color-pink;
+							font-size: rem(13);
+							padding: 0.3em 0.6em;
+							border-radius: 5px;
+							@include mediaSP {
+								font-size: vwSP(15);
+							}
+						}
+						&.active {
+							a {
+								background-color: $color-gray;
+							}
+						}
+					}
+				}
+				&_cont {
+					border-bottom: 1px dotted $color-gray;
+					padding-left: 1em;
+					padding-right: 1em;
+					padding-bottom: 2.5em;
+					margin-bottom: 3em;
+					@include mediaSP {
+						padding-bottom: 1.2em;
+						margin-bottom: 1.8em;
+					}
+					&:last-child {
+						border-bottom: none;
+						margin-bottom: 0;
+					}
+					&Title {
+						font-weight: bold;
+						margin-bottom: 1.2em;
+						@include mediaPC {
+							font-size: rem(18);
+						}
+						@include mediaSP {
+							font-size: vwSP(20);
+						}
+					}
+					&Text {
+						@include mediaPC {
+							font-size: rem(16);
+						}
+						@include mediaSP {
+							font-size: vwSP(16);
+						}
+					}
+					&List {
+						font-weight: bold;
+						span {
+							+ span {
+								margin-left: 1em;
+							}
+						}
+						li {
+							display: flex;
+							margin-bottom: 0.8em;
+							&:last-child {
+								margin-bottom: 0;
+							}
+						}
+						@include mediaPC {
+							font-size: rem(18);
+						}
+						@include mediaSP {
+							font-size: vwSP(20);
+						}
+					}
+					&Data {
+						display: flex;
+						margin-bottom: 1.2em;
+						&:last-child {
+							margin-bottom: 0;
+						}
+						@include mediaPC {
+							font-size: rem(18);
+						}
+						@include mediaSP {
+							font-size: vwSP(20);
+						}
+						dt {
+							font-weight: bold;
+							width: 8em;
+						}
+						dd {
+							width: calc(100% - 8em);
+							display: flex;
+							align-items: center;
+							flex-wrap: wrap;
+							gap: 1em;
+						}
+						.btn {
+							a {
+								display: inline-block;
+								color: $color-purewhite;
+								background-color: $color-pink;
+								font-size: rem(13);
+								padding: 0.4em 1em;
+								border-radius: 5px;
+								@include mediaSP {
+									font-size: vwSP(15);
+								}
+							}
+						}
+					}
 				}
 			}
 		}
