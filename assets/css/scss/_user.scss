@@ -97,12 +97,11 @@
 			margin-bottom: 100px;
 			@include mediaSP {
 				display: block;
-				margin-bottom: vwSP(100);
+				margin-bottom: vwSP(80);
 			}
 		}
 		.user {
 			&Img {
-				position: relative;
 				@include mediaPC {
 					width: 48%;
 					img {
@@ -110,14 +109,47 @@
 					}
 				}
 				@include mediaSP {
-					margin-bottom: vwSP(80);
+					margin-bottom: vwSP(100);
 				}
 				&_main {
+					position: relative;
 					@include mediaPC {
 						margin-bottom: 50px;
 					}
 					@include mediaSP {
 						margin-bottom: vwSP(60);
+					}
+					&Item {
+						background-color: $color-lightgray;
+						@include mediaPC {
+							height: 35vw;
+							max-height: 370px;
+						}
+						@include mediaSP {
+							height: 73vw;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+				}
+				&_thumb {
+					&Item {
+						background-color: $color-lightgray;
+						@include mediaPC {
+							height: 25vw;
+							max-height: 120px;
+						}
+						@include mediaSP {
+							height: 23vw;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: contain;
+						}
 					}
 				}
 				&_btn {
@@ -130,8 +162,11 @@
 						transform: rotate(45deg);
 						position: absolute;
 						top: 50%;
-						right: -1.2em;
+						right: -1.5em;
 						z-index: 100;
+						@include mediaSP {
+							right: -0.5em;
+						}
 					}
 					&-prev {
 						display: block;
@@ -142,8 +177,11 @@
 						transform: rotate(225deg);
 						position: absolute;
 						top: 50%;
-						left: -1.2em;
+						left: -1.5em;
 						z-index: 100;
+						@include mediaSP {
+							left: -0.5em;
+						}
 					}
 				}
 			}
@@ -156,7 +194,7 @@
 						margin-bottom: 60px;
 					}
 					@include mediaSP {
-						margin-bottom: vwSP(80);
+						margin-bottom: vwSP(50);
 					}
 					&::after {
 						content: "";
@@ -177,7 +215,7 @@
 						align-items: center;
 						flex-wrap: wrap;
 					}
-					&Text {
+					&Title {
 						font-weight: bold;
 						padding-left: 0.5em;
 						padding-right: 0.5em;
@@ -224,6 +262,8 @@
 					padding-bottom: 2.5em;
 					margin-bottom: 3em;
 					@include mediaSP {
+						padding-left: 0.5em;
+						padding-right: 0.5em;
 						padding-bottom: 1.2em;
 						margin-bottom: 1.8em;
 					}
@@ -272,6 +312,7 @@
 					}
 					&Data {
 						display: flex;
+						align-items: center;
 						margin-bottom: 1.2em;
 						&:last-child {
 							margin-bottom: 0;
@@ -285,6 +326,9 @@
 						dt {
 							font-weight: bold;
 							width: 8em;
+							@include mediaSP {
+								width: 10em;
+							}
 						}
 						dd {
 							width: calc(100% - 8em);
@@ -299,13 +343,123 @@
 								color: $color-purewhite;
 								background-color: $color-pink;
 								font-size: rem(13);
-								padding: 0.4em 1em;
+								padding: 0.4em 1.2em;
 								border-radius: 5px;
 								@include mediaSP {
 									font-size: vwSP(15);
 								}
 							}
 						}
+					}
+				}
+			}
+			&Diary {
+				&_heading {
+					@include mediaPC {
+						margin-bottom: 60px;
+					}
+					@include mediaSP {
+						margin-bottom: vwSP(60);
+					}
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 1px;
+						background-color: $color-gray;
+						margin-top: 0.6em;
+					}
+					&Inner {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						flex-wrap: wrap;
+					}
+					&Title {
+						font-weight: bold;
+						padding-left: 0.5em;
+						padding-right: 0.5em;
+						@include mediaPC {
+							font-size: rem(20);
+						}
+						@include mediaSP {
+							font-size: vwSP(28);
+						}
+					}
+					&Btn {
+						margin-right: 0.5em;
+						a {
+							display: inline-block;
+							color: $color-purewhite;
+							background-color: $color-blue;
+							font-size: rem(14);
+							padding: 0.4em 1em;
+							border-radius: 5px;
+							@include mediaSP {
+								font-size: vwSP(15);
+							}
+						}
+					}
+				}
+				&_cont {
+					position: relative;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 1px;
+						background-color: $color-gray;
+						@include mediaPC {
+							margin-top: 60px;
+						}
+						@include mediaSP {
+							margin-top: vwSP(80);
+						}
+					}
+				}
+				&_item {
+					display: flex;
+					align-items: flex-start;
+					flex-wrap: wrap;
+					@include mediaSP {
+						flex-direction: column;
+						font-size: vwSP(15);
+					}
+					span {
+						display: inline-block;
+					}
+					&Wrap {
+						padding-left: 1em;
+						padding-right: 1em;
+						margin-bottom: 2.8em;
+						@include mediaSP {
+							margin-bottom: 2.2em;
+						}
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+					&Date {
+						width: 10em;
+						@include mediaSP {
+							width: 100%;
+							margin-bottom: 0.5em;
+						}
+					}
+					&Title {
+						width: calc(100% - 10em);
+						@include mediaSP {
+							width: 100%;
+						}
+					}
+				}
+				&_link {
+					position: absolute;
+					right: 0;
+					bottom: 1em;
+					@include mediaSP {
+						font-size: vwSP(15);
 					}
 				}
 			}
