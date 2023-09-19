@@ -8,6 +8,7 @@
 		@include mediaSP {
 			font-size: vwSP(18);
 		}
+
 		label {
 			display: block;
 			font-weight: bold;
@@ -31,10 +32,42 @@
 		}
 		select {
 			background-color: #fff;
-			width: 7em;
 			letter-spacing: 0.1em;
 			padding: 0.5em 0.7em;
 			border-radius: 5px;
+		}
+		&Text {
+			font-weight: bold;
+			margin-bottom: 0.8em;
+			margin-left: 0.5em;
+		}
+		&Select {
+			&.arrow {
+				position: relative;
+				&::before {
+					content: "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 5px 5px 0 5px;
+					border-color: $color-gray transparent transparent transparent;
+					position: absolute;
+					top: 50%;
+					right: 5px;
+					transform: translateY(-50%);
+				}
+			}
+			&.pref {
+				width: 9em;
+				select {
+					width: 100%;
+				}
+			}
+			&.birthday {
+				select {
+					text-align: center;
+				}
+			}
 		}
 		+ .form_btn {
 			margin-top: 6em;
