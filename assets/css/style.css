@@ -391,6 +391,8 @@ footer .fnav {
 @media screen and (min-width: 769px) {
   footer .fnav {
     margin-bottom: 50px;
+    padding: 0em 1em;
+    gap: 2.5em;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1974,17 +1976,22 @@ footer .copy {
 }
 @media screen and (min-width: 769px) {
   .message .content_heading {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 768px) {
   .message .content_heading {
-    margin-bottom: 7.8125vw;
+    margin-bottom: 6.5104166667vw;
   }
 }
 .message_body {
   position: relative;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 300px);
+}
+@media screen and (max-width: 768px) {
+  .message_body {
+    height: calc(100vh - 9.1145833333vw);
+  }
 }
 .message_cont {
   font-size: 1rem;
@@ -2027,11 +2034,17 @@ footer .copy {
 .message_right + .message_right .message_box {
   margin-top: 0.5em;
 }
+.message_contArea {
+  padding: 0em 1em 4.2em;
+  height: 100%;
+  overflow: auto;
+}
 .message_sendArea {
   background-color: #EBEBE6;
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 100;
 }
 .message_sendWrap {
   display: flex;
@@ -2047,7 +2060,7 @@ footer .copy {
   width: 100%;
   height: 100%;
   letter-spacing: 0.1em;
-  padding: 0.8em 1em;
+  padding: 0.5em 0.8em;
   border-radius: 8px;
 }
 @media screen and (max-width: 768px) {

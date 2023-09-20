@@ -4,15 +4,18 @@
 	}
 	.content_heading {
 		@include mediaPC {
-			margin-bottom: 50px;
+			margin-bottom: 40px;
 		}
 		@include mediaSP {
-			margin-bottom: vwSP(60);
+			margin-bottom: vwSP(50);
 		}
 	}
 	&_body {
 		position: relative;
-		height: calc(100vh - 400px);
+		height: calc(100vh - 300px);
+		@include mediaSP {
+			height: calc(100vh - vwSP(70));
+		}
 	}
 	&_cont {
 		font-size: rem(16);
@@ -59,12 +62,21 @@
 		}
 	}
 
+	&_cont {
+		&Area {
+			padding: 0em 1em 4.2em;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
 	&_send {
 		&Area {
 			background-color: $color-basewhite;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			z-index: 100;
 		}
 		&Wrap {
 			display: flex;
@@ -79,7 +91,7 @@
 				width: 100%;
 				height: 100%;
 				letter-spacing: 0.1em;
-				padding: 0.8em 1em;
+				padding: 0.5em 0.8em;
 				border-radius: 8px;
 				@include mediaSP {
 					padding: 0.5em 0.7em;
