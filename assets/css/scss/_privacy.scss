@@ -1,0 +1,40 @@
+.privacy {
+	&_wrap {
+		+ .privacy_wrap {
+			margin-top: 3em;
+		}
+	}
+	&_title {
+		font-weight: bold;
+		font-size: rem(18);
+		margin-bottom: 1em;
+		@include mediaSP {
+			font-size: vwSP(16);
+		}
+	}
+	&_cont {
+		font-size: rem(16);
+		@include mediaSP {
+			font-size: vwSP(15);
+		}
+		p {
+			+ p {
+				margin-top: 0.8em;
+			}
+		}
+		div {
+			margin-top: 1.2em;
+			margin-left: 2.5em;
+			> div {
+				margin-left: 2.5em;
+			}
+			+ p {
+				margin-top: 1.2em;
+			}
+			> p {
+				text-indent: -1.5em;
+			}
+		}
+
+	}
+}

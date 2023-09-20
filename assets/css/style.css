@@ -2098,3 +2098,42 @@ footer .copy {
     font-size: 1.8229166667vw;
   }
 }
+
+/*プライバシーポリシー*/
+.privacy_wrap + .privacy_wrap {
+  margin-top: 3em;
+}
+.privacy_title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 768px) {
+  .privacy_title {
+    font-size: 2.0833333333vw;
+  }
+}
+.privacy_cont {
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .privacy_cont {
+    font-size: 1.953125vw;
+  }
+}
+.privacy_cont p + p {
+  margin-top: 0.8em;
+}
+.privacy_cont div {
+  margin-top: 1.2em;
+  margin-left: 2.5em;
+}
+.privacy_cont div > div {
+  margin-left: 2.5em;
+}
+.privacy_cont div + p {
+  margin-top: 1.2em;
+}
+.privacy_cont div > p {
+  text-indent: -1.5em;
+}
